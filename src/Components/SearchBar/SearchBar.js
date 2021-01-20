@@ -2,7 +2,12 @@ import React from 'react';
 import './SearchBar.css';
 
 export class SearchBar extends React.Component { 
-    render(){
+    
+  search(){
+    this.props.onSearch();
+  }
+     
+  render(){
         return (
          <div className="SearchBar">
             <input placeholder="Enter A Song, Album, or Artist" />
@@ -12,4 +17,4 @@ export class SearchBar extends React.Component {
     }
 }
 
-
+// Search bar, renders a search bar and a search button and is exported
