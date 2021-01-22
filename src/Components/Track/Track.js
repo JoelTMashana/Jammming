@@ -10,13 +10,12 @@ export class Track extends React.Component {
     }
 
     renderAction(){
-        {/* is removal is not defined yet */}
         if(this.props.isRemoval){
             return <button className="Track-action" onClick={this.removeTrack}>-</button>;
         } else{
             return <button className="Track-action" onClick={this.addTrack}>+</button>;
         }
-        
+   
     }
     
     addTrack(){
@@ -31,16 +30,13 @@ export class Track extends React.Component {
             <div className="Track">
                  <div class="Track-information">
                      <h3>{this.props.track.name}</h3>
-                     <p>{ this.props.track.artist + ' ' + '|' + ' ' + this.props.track.album}</p>
+                     <p>{ this.props.track.artist} | {this.props.track.album}</p>
                 </div>
                 {this.renderAction()}
-                <button className="Track-action">{/*<!-- + or - will go here -->*/}</button>
             </div>
             
         );
     }
 }
 
-//shows a + sign next to track if it is not a part of users playlist, else - 
-// renders 
 
